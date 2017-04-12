@@ -12,4 +12,5 @@ COPY *.js /src/
 
 EXPOSE 8080
 
-ENTRYPOINT ["npm","run"]
+ENTRYPOINT ["npm"]
+CMD ["run"]
