@@ -24,12 +24,12 @@ api.post('/data', (req, res, next) => {
     info(req.body);
 
     // Persist data
-    db.writePoints([
+    db.writePoints([{
         measurement: 'data',
         tags: { type: req.body.type },
         fields: { device: req.body.device, sensor: req.body.sensor, value: req.body.value },
         timestamp: new Date().getTime() * 1000000
-    ]).then(() => {
+    }]).then(() => {
         return res.sendStatus(201);
     }).catch( err => {
         error(err.message);
