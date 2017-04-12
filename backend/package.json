@@ -2,6 +2,10 @@
   "name": "arduino-temperature-complete",
   "version": "1.0.0",
   "description": "Arduino temperature monitor with bateries included",
+  "repository" : { 
+      "type" : "git",
+      "url" : "https://github.com/opsxcq/arduino-temperature-complete"
+  },
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

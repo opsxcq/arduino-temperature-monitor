@@ -8,8 +8,8 @@ COPY package.json /src
 
 RUN npm install
 
-COPY *.js /src
+COPY *.js /src/
 
 EXPOSE 8080
 
-ENTRYPOINT ["npm","start"]
+ENTRYPOINT ["npm","run"]
