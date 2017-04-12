@@ -1,0 +1,22 @@
+{
+  "name": "arduino-temperature-complete",
+  "version": "1.0.0",
+  "description": "Arduino temperature monitor with bateries included",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "./node_modules/.bin/mocha tests/senddata.js"
+  },
+  "author": "OPSXCQ",
+  "license": "GPL3",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "influx": "^5.0.6",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  }
+}
