@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+    database:
+        image: influxdb
+        environment:
+            - INFLUXDB_ADMIN_ENABLED:true
+        ports:
+            - "8083:8083"
+            - "8086:8086"
+    backend:
+        image: strm/arduino-temperature
+        ports:
+            - "8080:8080"
