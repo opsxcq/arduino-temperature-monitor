@@ -3,7 +3,7 @@
 
 const api     = require('./api'), // API 
       util    = require('util'), // Other dependencies
-      winston = require('winston'),
+      winston = require('winston');
 
 // the base API port
 let port   = process.env.PORT || 8080;

@@ -13,4 +13,4 @@ COPY *.js /src/
 EXPOSE 8080
 
 ENTRYPOINT ["npm"]
-CMD ["run"]
+CMD ["start"]
