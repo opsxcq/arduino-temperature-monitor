@@ -1,9 +1,16 @@
 const express    = require('express'),
       bodyParser = require('body-parser'),
-      winston    = require('winston');
+      winston    = require('winston'),
+      influx     = require('influx');
 
 // Express configuration
 let api = module.exports = express();
+
+// Our database connection
+let db = new influx.InfluxDB({
+    host: process.env.INFLUX_HOST || "database",
+    database: process.env.INFLUX_DATABASE || "temperature"
+});
 
 // Configure the body parsing routines
 api.use(bodyParser.json());
