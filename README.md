@@ -30,5 +30,14 @@ while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '
 
 ### Influxdb configuration
 
+
+
 ### Grafana configuration
 
+#### Create datasource
+
+Datasource creation is simplified, so you can just run the script bellow and get it configured for this environment
+
+```
+curl 'http://admin:admin@10.1.1.5:3000/api/datasources' -sq | grep sensors > /dev/null || curl 'http://admin:admin@10.1.1.5:3000/api/datasources' -X POST -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"name":"sensors","type":"influxdb","url":"http://database:8086","access":"proxy","isDefault":true,"database":"temperature"}'
+```
