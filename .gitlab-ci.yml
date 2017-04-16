@@ -28,3 +28,14 @@ build-backend:
     - docker tag "$CI_REGISTRY_IMAGE:$IMAGE_TAG" "$PUBLIC_TAG"
   tags:
     - docker
+
+build-firmare:
+    image: strm/dev-arduino
+    stage: build
+    script: 
+        - ino build
+        - cp .build/uno/firmware.hex .
+    artifacts:
+        name: 'firmaware-${CI_BUILD_REF_NAME}-${CI_BUILD_ID}'
+        paths:
+            - firmware.hex
