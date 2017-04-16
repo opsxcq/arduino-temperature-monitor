@@ -9,7 +9,7 @@ services:
             - "8083:8083"
             - "8086:8086"
     backend:
-        image: strm/arduino-temperature
+        image: strm/temperature-monitor-backend
         ports:
             - "8080:8080"
     grafana:
