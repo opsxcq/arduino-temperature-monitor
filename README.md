@@ -6,17 +6,21 @@
 
 # Up and Running
 
-# Arduino
 
-## Configure the firmware
 
-## Arduino components & wiring
+## Arduino
 
-# Backend
+### Configure the firmware
 
-## Docker setup
+### Arduino components & wiring
 
-## Influxdb configuration
 
-## Grafana configuration
+
+## Backend
+
+### Docker setup
+
+### Influxdb configuration
+
+### Grafana configuration
 
