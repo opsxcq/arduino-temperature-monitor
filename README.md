@@ -25,7 +25,8 @@
 You can send some sample data to feed your backend, here is an example using curl
 
 ```
-while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '{"type": "temperature", "value": '$(( ( RANDOM % 30 )  + 5 ))',"device": 1,  "sensor": 123 }' http://localhost:8080/temperature; sleep 4;done;
+BACKEND='backend.project.com'
+while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '{"type": "temperature", "value": '$(( ( RANDOM % 30 )  + 5 ))',"device": 1,  "sensor": 123 }' http://$BACKEND:8080/temperature; sleep 4;done;
 ```
 
 ### Influxdb configuration
@@ -39,5 +40,6 @@ while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '
 Datasource creation is simplified, so you can just run the script bellow and get it configured for this environment
 
 ```
-curl 'http://admin:admin@10.1.1.5:3000/api/datasources' -sq | grep sensors > /dev/null || curl 'http://admin:admin@10.1.1.5:3000/api/datasources' -X POST -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"name":"sensors","type":"influxdb","url":"http://database:8086","access":"proxy","isDefault":true,"database":"temperature"}'
+BACKEND='backend.project.com'
+curl 'http://admin:admin@'$BACKEND':3000/api/datasources' -sq | grep sensors > /dev/null || curl 'http://admin:admin@'$BACKEND':3000/api/datasources' -X POST -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"name":"sensors","type":"influxdb","url":"http://database:8086","access":"proxy","isDefault":true,"database":"temperature"}'
 ```
