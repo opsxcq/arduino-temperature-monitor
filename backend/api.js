@@ -16,7 +16,7 @@ let info = winston.info;
 let error = winston.error;
 
 // Configure the body parsing routines
-api.use(bodyParser.json());
+api.use(bodyParser.json({strict: false}));
 api.use(bodyParser.urlencoded({ extended: true }));
 
 // Just print the incoming data

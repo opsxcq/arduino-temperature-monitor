@@ -4,7 +4,7 @@ services:
     database:
         image: influxdb
         environment:
-            - INFLUXDB_ADMIN_ENABLED:true
+            - INFLUXDB_ADMIN_ENABLED=true
         ports:
             - "8083:8083"
             - "8086:8086"
