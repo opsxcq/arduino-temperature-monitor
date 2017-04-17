@@ -197,9 +197,11 @@ If everything went fine, you will be presented to this page
 
 ### Grafana configuration
 
+The very next step it to configure Grafana, where our data will be rendered.
+
 #### Create datasource
 
-Datasource creation is simplified, so you can just run the script bellow and get it configured for this environment
+Datasource creation is really simple, just run the script bellow and everything will be configured for this environment:
 
 ```
 BACKEND='backend.project.com'
@@ -209,6 +211,8 @@ curl 'http://admin:admin@'$BACKEND':3000/api/datasources' -sq | grep sensors > /
 Just replace the `BACKEND` variable with the location of your Grafana server.
 
 #### Import the dashboard
+
+The very next step is to import the dashboard, you don't need to create one, [use this one](dashboard.json). Access your Grafana interface at your backend host at the port `3000`.
 
 
 
@@ -223,4 +227,6 @@ while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '
 
 Just replace the `BACKEND` variable with the location of your backend server.
 
-### 
+#Security notice
+
+As you can notice, all passwords are default, all services are exposed, and there is no security control, this is just a POC, but I strongly recommend that you don't deploy it in a production environment.
