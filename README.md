@@ -108,6 +108,16 @@ Linking firmware.elf
 Converting to firmware.hex
 ```
 
+After a successful compilation, connect your arduino to the USB port and run this command, in the same folder
+
+```
+docker run --rm -it -v "$(pwd):/src" --device=/dev/ttyUSB0 strm/dev-arduino upload
+```
+
+Considering that your Arduino is mapped to your USB located at `/dev/ttyUSB0`.
+
+
+
 ## Backend
 
 ### Docker setup
