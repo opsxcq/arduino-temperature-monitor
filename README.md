@@ -212,7 +212,13 @@ Just replace the `BACKEND` variable with the location of your Grafana server.
 
 #### Import the dashboard
 
-The very next step is to import the dashboard, you don't need to create one, [use this one](dashboard.json). Access your Grafana interface at your backend host at the port `3000`.
+The very next step is to import the dashboard, you don't need to create one, [use this one](dashboard.json). Access your Grafana interface at your backend host at the port `3000`. You will be presented to this page
+
+![grafana](prints/grafana-login.png)
+
+The default username is `admin` and the password too. Then go to `New Dashboard`.
+
+![grafana-dash](prints/grafana-new-dash.png)
 
 
 
