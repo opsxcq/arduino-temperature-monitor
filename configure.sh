@@ -14,6 +14,8 @@ function configure(){
     fi
     local backend=$1
     local port=$2
+    echo '[+] Configuring backend server'
+    echo '[+] Generating source files'
     cat <<EOF
 #ifndef Backend_h
 #define Backend_h
@@ -23,6 +25,7 @@ int serverPort = $port;
 
 #endif
 EOF
+    echo '[+] Done'
 }
 
 

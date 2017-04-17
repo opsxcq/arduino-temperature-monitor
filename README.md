@@ -12,6 +12,21 @@
 
 ### Configure the firmware
 
+Before everything else, you need to configure your arduino firmware to connect to your backend server. There is a script for that called `configure.sh`. This script takes 2 arguments, the first is the `hostname` where you deployed your backend and the second is the port. Example:
+
+```
+./configure.sh backend.project.com 8080
+```
+
+If everything is ok, you will get the output:
+
+```
+$./configure.sh backend.project.com 8080
+[+] Configuring backend server
+[+] Generating source files
+[+] Done
+```
+
 ### Arduino components & wiring
 
 
@@ -60,4 +75,3 @@ curl 'http://admin:admin@'$BACKEND':3000/api/datasources' -sq | grep sensors > /
 ```
 
 #### Import the dashboard
-
