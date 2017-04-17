@@ -185,7 +185,15 @@ To access your Influxdb admin interface go to your backend at port `8083`. You w
 
 ![influx](prints/influxdb-main.png)
 
-We will need to create our database to store the input data, so 
+We will need to create our database to store the input data, so let's create a database named `temperature`. Execute this query:
+
+```
+CREATE DATABASE "temperature"
+```
+
+If everything went fine, you will be presented to this page
+
+![influxsuccess](prints/influxdb-createdb.png)
 
 ### Grafana configuration
 
