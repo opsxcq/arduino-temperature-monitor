@@ -31,6 +31,14 @@ $./configure.sh backend.project.com 8080
 
 The components that you will need to setup this experiment:
 
+* Arduino Uno R3
+* Ethernet shield
+* DHT11 - Temperature and Humidity sensor
+* Cables
+  * Ethernet cable
+  * Power cable for arduino
+  * 3 male -> female jumpers 
+
 ### Compile and upload the firmware
 
 
