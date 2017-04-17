@@ -181,9 +181,11 @@ It will start the whole stack.
 
 ### Influxdb configuration
 
-Create the database
+To access your Influxdb admin interface go to your backend at port `8083`. You will be presented to this page
 
+![influx](prints/influxdb-main.png)
 
+We will need to create our database to store the input data, so 
 
 ### Grafana configuration
 
