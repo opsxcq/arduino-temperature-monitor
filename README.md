@@ -196,6 +196,8 @@ BACKEND='backend.project.com'
 curl 'http://admin:admin@'$BACKEND':3000/api/datasources' -sq | grep sensors > /dev/null || curl 'http://admin:admin@'$BACKEND':3000/api/datasources' -X POST -H 'Content-Type: application/json;charset=UTF-8' --data-binary '{"name":"sensors","type":"influxdb","url":"http://database:8086","access":"proxy","isDefault":true,"database":"temperature"}'
 ```
 
+Just replace the `BACKEND` variable with the location of your Grafana server.
+
 #### Import the dashboard
 
 
