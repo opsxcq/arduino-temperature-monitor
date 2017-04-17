@@ -33,6 +33,7 @@ build-firmare:
     image: strm/dev-arduino
     stage: build
     script: 
+        - cd arduino
         - ino build
         - cp .build/uno/firmware.hex .
     artifacts:
