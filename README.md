@@ -234,7 +234,7 @@ Choose the `dashboard.json` file and you will get an empty dashboard, that after
 
 ![dash](prints/dashboard.png)
 
-### Test backend
+### Test backend with mock data
 
 You can send some sample data to feed your backend, here is an example using curl
 
