@@ -247,6 +247,6 @@ Just replace the `BACKEND` variable with the location of your backend server. So
 
 
 
-#Security notice
+# Security notice
 
 As you can notice, all passwords are default, all services are exposed, and there is no security control, this is just a POC, but I strongly recommend that you don't deploy it in a production environment.
