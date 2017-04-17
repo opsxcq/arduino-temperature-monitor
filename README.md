@@ -39,6 +39,12 @@ The components that you will need to setup this experiment:
   * Power cable for arduino
   * 3 male -> female jumpers 
 
+The wiring is very simple, just install the ethernet shield, wire the DHT11 pins to:
+
+* `VCC` - 5V
+* `GND` - Ground
+* `Data` - Arduino digital pin 3.
+
 ### Compile and upload the firmware
 
 You can use the `strm/dev-arduino` docker image to build this repository, just `cd` into the arduino folder and run
