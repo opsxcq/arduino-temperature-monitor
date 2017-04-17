@@ -114,7 +114,39 @@ After a successful compilation, connect your arduino to the USB port and run thi
 docker run --rm -it -v "$(pwd):/src" --device=/dev/ttyUSB0 strm/dev-arduino upload
 ```
 
-Considering that your Arduino is mapped to your USB located at `/dev/ttyUSB0`.
+Considering that your Arduino is mapped to your USB located at `/dev/ttyUSB0`. Your result will be:
+
+```
+Searching for stty ... /bin/stty
+Searching for avrdude ... /usr/share/arduino/hardware/tools/avrdude
+Searching for avrdude.conf ... /usr/share/arduino/hardware/tools/avrdude.conf
+Guessing serial port ... /dev/ttyUSB0
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.00s
+
+avrdude: Device signature = 0x1e950f
+avrdude: reading input file ".build/uno/firmware.hex"
+avrdude: writing flash (16054 bytes):
+
+Writing | ################################################## | 100% 2.66s
+
+avrdude: 16054 bytes of flash written
+avrdude: verifying flash memory against .build/uno/firmware.hex:
+avrdude: load data flash data from input file .build/uno/firmware.hex:
+avrdude: input file .build/uno/firmware.hex contains 16054 bytes
+avrdude: reading on-chip flash data:
+
+Reading | ################################################## | 100% 2.14s
+
+avrdude: verifying ...
+avrdude: 16054 bytes of flash verified
+
+avrdude: safemode: Fuses OK (E:00, H:00, L:00)
+
+avrdude done.  Thank you.
+```
 
 
 
