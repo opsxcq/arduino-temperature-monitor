@@ -169,16 +169,15 @@ chmod +x /usr/local/bin/docker-compose
 
 
 
-### Test backend
+### Start the backend 
 
-You can send some sample data to feed your backend, here is an example using curl
+Just go to the folder where your `docker-compose.yml` is located and run
 
 ```
-BACKEND='backend.project.com'
-while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '{"type": "temperature", "value": '$(( ( RANDOM % 30 )  + 5 ))',"device": 1,  "sensor": 123 }' http://$BACKEND:8080/temperature; sleep 4;done;
+docker-compose up
 ```
 
-
+It will start the whole stack.
 
 ### Influxdb configuration
 
@@ -198,3 +197,18 @@ curl 'http://admin:admin@'$BACKEND':3000/api/datasources' -sq | grep sensors > /
 ```
 
 #### Import the dashboard
+
+
+
+### Test backend
+
+You can send some sample data to feed your backend, here is an example using curl
+
+```
+BACKEND='backend.project.com'
+while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '{"type": "temperature", "value": '$(( ( RANDOM % 30 )  + 5 ))',"device": 1,  "sensor": 123 }' http://$BACKEND:8080/temperature; sleep 4;done;
+```
+
+Just replace the `BACKEND` variable with the location of your backend server.
+
+### 
