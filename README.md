@@ -220,6 +220,10 @@ The default username is `admin` and the password too. Then go to `New Dashboard`
 
 ![grafana-dash](prints/grafana-new-dash.png)
 
+You can import a dashboard by clicking in the left menu and going into `Import`
+
+![grafana-import](prints/grafana-import-dashboard.png)
+
 
 
 ### Test backend
