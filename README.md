@@ -224,7 +224,9 @@ You can import a dashboard by clicking in the left menu and going into `Import`
 
 ![grafana-import](prints/grafana-import-dashboard.png)
 
+Choose the `dashboard.json` file and you will get an empty dashboard, that after a while, will be filled with enought data like this.
 
+![dash](prints/dashboard.png)
 
 ### Test backend
 
@@ -235,7 +237,9 @@ BACKEND='backend.project.com'
 while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '{"type": "temperature", "value": '$(( ( RANDOM % 30 )  + 5 ))',"device": 1,  "sensor": 123 }' http://$BACKEND:8080/temperature; sleep 4;done;
 ```
 
-Just replace the `BACKEND` variable with the location of your backend server.
+Just replace the `BACKEND` variable with the location of your backend server. So you can troubleshoot what is happening and test the whole backend stack.
+
+
 
 #Security notice
 
