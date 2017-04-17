@@ -16,7 +16,7 @@ function configure(){
     local port=$2
     echo '[+] Configuring backend server'
     echo '[+] Generating source files'
-    cat <<EOF
+    cat > ./arduino/src/config.h <<EOF
 #ifndef Backend_h
 #define Backend_h
 
