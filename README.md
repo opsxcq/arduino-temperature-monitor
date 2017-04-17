@@ -29,6 +29,10 @@ $./configure.sh backend.project.com 8080
 
 ### Arduino components & wiring
 
+The components that you will need to setup this experiment:
+
+### Compile and upload the firmware
+
 
 
 ## Backend
