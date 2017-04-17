@@ -3,10 +3,11 @@
 
 #include "dht.h"
 
+// Backend configuration
+#include "config.h"
+
 // Ethernet related declarations
 byte mac[] = { 0xDE, 0xAD, 0xC0, 0xDE, 0xBA, 0xBE };
-char server[] = "10.1.1.5";
-int serverPort = 8080;
 IPAddress ip(10, 1, 1, 177);
 EthernetClient client;
 
