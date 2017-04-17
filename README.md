@@ -135,7 +135,7 @@ curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-compos
 chmod +x /usr/local/bin/docker-compose
 ```
 
- 
+
 
 ### Test backend
 
@@ -146,9 +146,13 @@ BACKEND='backend.project.com'
 while true; do clear; date; curl -XPOST -H "Content-Type: application/json" -d '{"type": "temperature", "value": '$(( ( RANDOM % 30 )  + 5 ))',"device": 1,  "sensor": 123 }' http://$BACKEND:8080/temperature; sleep 4;done;
 ```
 
+
+
 ### Influxdb configuration
 
 Create the database
+
+
 
 ### Grafana configuration
 
