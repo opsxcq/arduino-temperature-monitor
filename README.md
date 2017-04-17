@@ -41,7 +41,72 @@ The components that you will need to setup this experiment:
 
 ### Compile and upload the firmware
 
+You can use the `strm/dev-arduino` docker image to build this repository, just `cd` into the arduino folder and run
 
+```
+docker run --rm -it -v "$(pwd):/src" strm/dev-arduino build
+```
+
+If you don't have the image locally it will be downloaded, and this will be the output of a successful compilation.
+
+```
+Searching for Board description file (boards.txt) ... /usr/share/arduino/hardware/arduino/boards.txt
+Searching for Arduino lib version file (version.txt) ... /usr/share/arduino/lib/version.txt
+Detecting Arduino software version ...  1.0.5 (2:1.0.5+dfsg2-4)
+Searching for Arduino core library ... /usr/share/arduino/hardware/arduino/cores/arduino
+Searching for Arduino standard libraries ... /usr/share/arduino/libraries
+Searching for Arduino variants directory ... /usr/share/arduino/hardware/arduino/variants
+Searching for make ... /usr/share/arduino/hardware/tools/avr/bin/make
+Searching for avr-gcc ... /usr/share/arduino/hardware/tools/avr/bin/avr-gcc
+Searching for avr-g++ ... /usr/share/arduino/hardware/tools/avr/bin/avr-g++
+Searching for avr-ar ... /usr/share/arduino/hardware/tools/avr/bin/avr-ar
+Searching for avr-objcopy ... /usr/share/arduino/hardware/tools/avr/bin/avr-objcopy
+src/sketch.ino
+Searching for Arduino lib version file (version.txt) ... /usr/share/arduino/lib/version.txt
+Detecting Arduino software version ...  1.0.5 (2:1.0.5+dfsg2-4)
+Scanning dependencies of src
+Scanning dependencies of arduino
+Scanning dependencies of dht
+Scanning dependencies of SPI
+Scanning dependencies of Ethernet
+src/sketch.cpp
+dht/dht.cpp
+Linking libdht.a
+Ethernet/Dhcp.cpp
+Ethernet/EthernetServer.cpp
+Ethernet/Ethernet.cpp
+Ethernet/EthernetClient.cpp
+Ethernet/utility/socket.cpp
+Ethernet/utility/w5100.cpp
+Ethernet/EthernetUdp.cpp
+Ethernet/Dns.cpp
+Linking libEthernet.a
+SPI/SPI.cpp
+Linking libSPI.a
+arduino/avr-libc/realloc.c
+arduino/avr-libc/malloc.c
+arduino/wiring_shift.c
+arduino/wiring_digital.c
+arduino/wiring.c
+arduino/wiring_analog.c
+arduino/WInterrupts.c
+arduino/wiring_pulse.c
+arduino/Stream.cpp
+arduino/Tone.cpp
+arduino/HardwareSerial.cpp
+arduino/CDC.cpp
+arduino/Print.cpp
+arduino/USBCore.cpp
+arduino/main.cpp
+arduino/WMath.cpp
+arduino/new.cpp
+arduino/HID.cpp
+arduino/WString.cpp
+arduino/IPAddress.cpp
+Linking libarduino.a
+Linking firmware.elf
+Converting to firmware.hex
+```
 
 ## Backend
 
