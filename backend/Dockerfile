@@ -1,6 +1,6 @@
 FROM node:7.8.0
 
-MAINTAINER opsxcq <opsxcq@thestorm.com.br>
+LABEL maintainer "opsxcq@strm.sh"
 
 WORKDIR /src
 
